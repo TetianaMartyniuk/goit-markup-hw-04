@@ -13,6 +13,10 @@
   --button-hover-bgc: #188ce8;
   /* Цвет телефона и эл.адреса в футере */
   --footer-text-phonemail: rgba(255, 255, 255, 0.6);
+  /* Цвет иконок */
+  --icon-main-color: #757575;
+  --icon-accent-color: #2196F3;
+  --icon-accent-second: #ffffff;
 }
 
 body {
@@ -131,11 +135,35 @@ header .container {
 }
 
 .address-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   color: var(--main-text-color);
 }
 .address-link:hover,
 .address-link:focus {
   color: var(--accent-color);
+}
+
+.mail-icon {
+  width: 16px;
+  height: 12px;
+  margin-right: 10px;
+  fill: var(--icon-main-color);
+}
+
+.smartphone-icon {
+  width: 10px;
+  height: 16px;
+  margin-right: 10px;
+  fill: var(--icon-main-color);
+}
+
+.address-link:hover .mail-icon,
+.address-link:focus .mail-icon,
+.address-link:hover .smartphone-icon,
+.address-link:focus .smartphone-icon {
+  fill: var(--icon-accent-color);
 }
 
 /* Hero */
@@ -227,6 +255,27 @@ header .container {
   font-weight: 700;
   text-transform: uppercase;
   color: var(--main-text-dark-color);
+}
+
+.features-pic {
+  display: block;
+  /* background-color: var(--secondary-bgc); */
+  background-color: var(--secondary-bgc);
+  width: 270px;
+  height: 120px;
+  border-radius: 4px;
+  margin-bottom: 30px;
+}
+.features-pic-antenna::before {
+  content: '';
+  display: inline-block;
+  width: 70px;
+  height: 70px;
+  padding: 25px 100px 25px 100px;
+  background-image:url(../images/antenna.png);
+  /* background-size: 70px 70px; */
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 /* Work */
