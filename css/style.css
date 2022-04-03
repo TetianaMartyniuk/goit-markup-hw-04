@@ -170,7 +170,6 @@ header .container {
 
 /* Hero */
 .hero {
-  align-items: center;
   text-align: center;
   padding-top: 200px;
   padding-bottom: 200px;
@@ -178,8 +177,8 @@ header .container {
   margin-left: auto;
   margin-right: auto;
   background-color: var(--hero-bgc);
-    background-image: url('/images/hero-background.webp'), linear-gradient(to right, rgba(47, 48, 58, 0.4),
-    rgba(47, 48, 58, 0.4));
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4),
+    rgba(47, 48, 58, 0.4)), url('../images/hero-background.webp');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: 50% 50%;
@@ -261,36 +260,13 @@ header .container {
   background-color: var(--secondary-bgc);
   justify-content: center;
   align-items: center;
-  width: 270px;
   height: 120px;
   border-radius: 4px;
   margin-bottom: 30px;
 }
-.features-pic-antenna::before,
-.features-pic-clock::before,
-.features-pic-diagram::before,
-.features-pic-astronaut::before {
-  content: '';
-  display: inline-block;
-  width: 70px;
-  height: 70px;
-  padding: 25px 100px 25px 100px;
-   /* background-size: 70px 70px; */
-  background-repeat: no-repeat;
-  background-position: center;
-}
-
-.features-pic-antenna::before {
-  background-image:url(../images/antenna.png);
-}
-.features-pic-clock::before {
-  background-image: url(../images/clock.png);
-}
-.features-pic-diagram::before {
-  background-image: url(../images/diagram.png);
-}
-.features-pic-astronaut::before {
-  background-image: url(../images/astronaut.png);
+.features-pic-antenna {
+  justify-content: center;
+  align-items: center;
 }
 
 /* Work */
@@ -325,15 +301,18 @@ header .container {
 
   color: var(--main-text-dark-color);
 }
-.team .title {
-}
 
 .team-list {
   display: flex;
   margin-top: 50px;
 }
 
+.team-details {
+  padding: 30px 32px 30px 32px;
+}
+
 .team-profile {
+  max-width: 270px;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
@@ -344,7 +323,7 @@ header .container {
 }
 
 .team-name {
-  margin-top: 30px;
+  /* margin-top: 30px; */
   font-size: 16px;
   font-weight: 500;
   text-align: center;
@@ -358,13 +337,18 @@ header .container {
 
 .social-list {
   display: flex;
-  justify-content: center;
-  align-items: center; 
-  margin-bottom: 30px;
+  /* justify-content: center;
+  align-items: center;  */
 }
 
-
 .social-icon {
+
+}
+.social-list:last-child {
+  margin-right: 0px;
+}
+
+.social-link {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -378,27 +362,29 @@ header .container {
   fill: var(--icon-main-color);
   
 }
-.social-list:last-child {
-  margin-right: 0px;
-}
-.social-icon:hover,
-.social-icon:focus {
+
+.social-link:hover,
+.social-link:focus {
   background-color: var(--accent-color);
   fill: var(--icon-accent-second);
 }
 
 /* Постоянные клиенты */
 
+
 .clients {
-  padding-top: 94px;
-  padding-bottom: 94px;
-  text-align: center;
+    
 }
 
 .clients-list {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-top: 50px;
+}
+
+.client-card {
+  margin-right: 30px;
 }
 
 .client {
@@ -410,9 +396,7 @@ header .container {
   height: 92px;
   border: 1px solid var(--icon-main-color);
   border-radius: 4px;
-  margin-right: 30px;
-  margin-top: 50px;
-
+  
   fill: var(--icon-main-color);
 }
 .clients-list:last-child {
@@ -436,6 +420,7 @@ header .container {
 
 .footer .container {
   display: flex;
+  align-items: baseline;
 }
 
 .footer-logo-link {
@@ -475,10 +460,10 @@ header .container {
 }
 
 .footer-socials {
-  max-width: 206px;
-  max-height: 80px;
+  /* max-width: 206px;
+  max-height: 80px; */
   margin-left: 70px;
-  margin-top: 12px;
+  /* margin-top: 12px; */
 }
 .footer-socials p {
   color: var(--secondary-text-color);
@@ -495,6 +480,13 @@ header .container {
   margin-top: 20px;
 }
 
+.social-items-footer {
+  margin-right: 10px;
+}
+
+.social-items-footer:last-child {
+  margin-right: 0px;
+}
 
 .social-icon-footer {
   display: flex;
@@ -506,13 +498,8 @@ header .container {
 
   background-color: var(--icon-footer-bgc);
   border-radius: 50%;
-  margin-right: 10px;
   fill: var(--icon-accent-second);
 
-}
-
-.social-list:last-child {
-  margin-right: 0px;
 }
 
 .social-icon-footer:hover,
