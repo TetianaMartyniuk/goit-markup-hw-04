@@ -359,12 +359,18 @@ header .container {
   background-color: inherit;
   border-radius: 50%;
   margin-right: 10px;
-  fill: var(--icon-main-color);
+  /* fill: var(--icon-main-color); */
   
 }
 
+.icon {
+  fill: var(--icon-main-color);
+}
+
 .social-link:hover,
-.social-link:focus {
+.social-link:focus,
+.icon:hover,
+.icon:focus {
   background-color: var(--accent-color);
   fill: var(--icon-accent-second);
 }
