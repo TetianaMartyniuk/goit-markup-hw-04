@@ -341,7 +341,8 @@ header .container {
   align-items: center;  */
 }
 
-.social-icon {
+.social-items:not(:last-child) {
+margin-right: 10px;
 
 }
 
@@ -359,7 +360,7 @@ header .container {
 
   background-color: inherit;
   border-radius: 50%;
-  margin-right: 10px;
+  /* margin-right: 10px; */
   fill: var(--icon-main-color);
   
 }
@@ -380,12 +381,12 @@ header .container {
 
 .clients-list {
   display: flex;
-  justify-content: center;
-  align-items: center;
+  /* justify-content: center;
+  align-items: center; */
   margin-top: 50px;
 }
 
-.client-card {
+.client-card:not(:last-child) {
   margin-right: 30px;
 }
 
